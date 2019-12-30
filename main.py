@@ -7,7 +7,7 @@ from stable_baselines import DQN
 env = gym.make('Atlantis-ram-v4')
 
 model = DQN(MlpPolicy, env, verbose=3)
-model.learn(total_timesteps=1000000)
+model.learn(total_timesteps=10000000, log_interval=1)
 
 observation = env.reset()
 total_reward = 0
